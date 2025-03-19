@@ -17,18 +17,43 @@ const customIcon = new Icon({
   shadowSize: [41, 41]
 });
 
+// Define property interface
+interface Property {
+  id: number;
+  title: string;
+  address: string;
+  price: string;
+  bedrooms: number;
+  bathrooms: number;
+  area: string;
+  position: [number, number]; // Latitude and longitude as tuple
+}
+
 // Sample property data
-const properties = [
+const properties: Property[] = [
   // Your properties data...
+  // If you want sample data, uncomment this:
+  /*
+  {
+    id: 1,
+    title: "Modern Luxury Villa",
+    address: "123 Main St, Beverly Hills, CA",
+    price: "$2,450,000",
+    bedrooms: 5,
+    bathrooms: 4,
+    area: "4,200 sq ft",
+    position: [34.0736, -118.4004]
+  }
+  */
 ];
 
 const PropertyMap = () => {
-  const [mapCenter, setMapCenter] = useState([39.8283, -98.5795]); // Center of US
+  const [mapCenter, setMapCenter] = useState<[number, number]>([39.8283, -98.5795]); // Center of US
   const [zoom, setZoom] = useState(4);
-  const [selectedProperty, setSelectedProperty] = useState(null);
+  const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
 
   // Handle property selection
-  const handlePropertySelect = (property) => {
+  const handlePropertySelect = (property: Property) => {
     setSelectedProperty(property);
     setMapCenter(property.position);
     setZoom(15);
