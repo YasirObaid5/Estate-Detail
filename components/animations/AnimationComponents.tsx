@@ -1,18 +1,32 @@
 "use client";
 
-import React from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import React, { ReactNode, useEffect, useState } from 'react';
+import { motion, useAnimation, Variant } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
+interface FadeInProps {
+  children: ReactNode;
+  delay?: number;
+  duration?: number;
+  className?: string;
+  direction?: 'up' | 'down' | 'left' | 'right';
+}
+
 // Fade in animation component
-export const FadeIn = ({ children, delay = 0, duration = 0.5, className = "", direction = "up" }) => {
+export const FadeIn = ({ 
+  children, 
+  delay = 0, 
+  duration = 0.5, 
+  className = "", 
+  direction = "up" 
+}: FadeInProps) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (inView) {
       controls.start("visible");
     }
@@ -49,15 +63,25 @@ export const FadeIn = ({ children, delay = 0, duration = 0.5, className = "", di
   );
 };
 
+interface StaggerChildrenProps {
+  children: ReactNode;
+  staggerDelay?: number;
+  className?: string;
+}
+
 // Staggered children animation component
-export const StaggerChildren = ({ children, staggerDelay = 0.1, className = "" }) => {
+export const StaggerChildren = ({ 
+  children, 
+  staggerDelay = 0.1, 
+  className = "" 
+}: StaggerChildrenProps) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (inView) {
       controls.start("visible");
     }
@@ -99,11 +123,21 @@ export const StaggerChildren = ({ children, staggerDelay = 0.1, className = "" }
   );
 };
 
-// Parallax scroll animation component
-export const ParallaxScroll = ({ children, speed = 0.2, className = "" }) => {
-  const [scrollY, setScrollY] = React.useState(0);
+interface ParallaxScrollProps {
+  children: ReactNode;
+  speed?: number;
+  className?: string;
+}
 
-  React.useEffect(() => {
+// Parallax scroll animation component
+export const ParallaxScroll = ({ 
+  children, 
+  speed = 0.2, 
+  className = "" 
+}: ParallaxScrollProps) => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
@@ -124,6 +158,14 @@ export const ParallaxScroll = ({ children, speed = 0.2, className = "" }) => {
   );
 };
 
+interface HoverAnimationProps {
+  children: ReactNode;
+  scale?: number;
+  rotate?: number;
+  className?: string;
+  shadow?: boolean;
+}
+
 // Hover animation component
 export const HoverAnimation = ({ 
   children, 
@@ -131,7 +173,7 @@ export const HoverAnimation = ({
   rotate = 0, 
   className = "",
   shadow = false
-}) => {
+}: HoverAnimationProps) => {
   return (
     <motion.div
       className={className}
@@ -147,8 +189,16 @@ export const HoverAnimation = ({
   );
 };
 
+interface PulseAnimationProps {
+  children: ReactNode;
+  className?: string;
+}
+
 // Pulse animation component
-export const PulseAnimation = ({ children, className = "" }) => {
+export const PulseAnimation = ({ 
+  children, 
+  className = "" 
+}: PulseAnimationProps) => {
   return (
     <motion.div
       className={className}
@@ -168,9 +218,9 @@ export const PulseAnimation = ({ children, className = "" }) => {
 
 // Scroll progress indicator
 export const ScrollProgress = () => {
-  const [scrollProgress, setScrollProgress] = React.useState(0);
+  const [scrollProgress, setScrollProgress] = useState(0);
   
-  React.useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       const totalScroll = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const currentScroll = window.scrollY;
@@ -190,15 +240,23 @@ export const ScrollProgress = () => {
   );
 };
 
+interface TextRevealProps {
+  text: string;
+  className?: string;
+}
+
 // Text reveal animation
-export const TextReveal = ({ text, className = "" }) => {
+export const TextReveal = ({ 
+  text, 
+  className = "" 
+}: TextRevealProps) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (inView) {
       controls.start("visible");
     }
