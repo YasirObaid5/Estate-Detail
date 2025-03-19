@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, ReactNode } from 'react';
-import dynamic from 'next/dynamic';
+
 
 // This component solely exists to prevent the map initialization error
 const LeafletMapWrapper = ({ children }: { children: ReactNode }) => {
