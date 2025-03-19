@@ -1,0 +1,34 @@
+// This is a placeholder CSS file for property images
+// In a real project, you would use actual property images
+.property-image-placeholder {
+  background-color: #f0f0f0;
+  background-image: linear-gradient(45deg, #e0e0e0 25%, transparent 25%, transparent 75%, #e0e0e0 75%, #e0e0e0),
+                    linear-gradient(45deg, #e0e0e0 25%, transparent 25%, transparent 75%, #e0e0e0 75%, #e0e0e0);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+}
+
+.property-1 {
+  background-color: #f8f9fa;
+  background-image: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+}
+
+.property-2 {
+  background-color: #f8f9fa;
+  background-image: linear-gradient(135deg, #ed64a6 0%, #d53f8c 100%);
+}
+
+.property-3 {
+  background-color: #f8f9fa;
+  background-image: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+}
+
+.property-4 {
+  background-color: #f8f9fa;
+  background-image: linear-gradient(135deg, #ecc94b 0%, #d69e2e 100%);
+}
+
+.property-5 {
+  background-color: #f8f9fa;
+  background-image: linear-gradient(135deg, #9f7aea 0%, #805ad5 100%);
+}

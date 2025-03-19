@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asset Placeholders Preview</title>
+  <link rel="stylesheet" href="css/placeholders.css">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      line-height: 1.5;
+      color: #1f2937;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    h1, h2, h3 {
+      color: #1f2937;
+    }
+    
+    .section {
+      margin-bottom: 3rem;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      background-color: #f9fafb;
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .card {
+      background-color: white;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    
+    .card-content {
+      padding: 1.5rem;
+    }
+    
+    .property-image {
+      height: 200px;
+      position: relative;
+    }
+    
+    .testimonial-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .service-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .hero-preview {
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Asset Placeholders Preview</h1>
+  <p>This page showcases the CSS-based placeholders used throughout the real estate detailer website.</p>
+  
+  <div class="section">
+    <h2>Property Image Placeholders</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="property-image property-image-1 property-image-pattern"></div>
+        <div class="card-content">
+          <h3>Property 1</h3>
+          <p>Modern Luxury Villa</p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="property-image property-image-2 property-image-pattern"></div>
+        <div class="card-content">
+          <h3>Property 2</h3>
+          <p>Downtown Penthouse</p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="property-image property-image-3 property-image-pattern"></div>
+        <div class="card-content">
+          <h3>Property 3</h3>
+          <p>Seaside Retreat</p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="property-image property-image-4 property-image-pattern"></div>
+        <div class="card-content">
+          <h3>Property 4</h3>
+          <p>Mountain View Cabin</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section">
+    <h2>Testimonial Avatars</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-content">
+          <div class="testimonial-container">
+            <div class="testimonial-avatar testimonial-avatar-1">SJ</div>
+            <div>
+              <h3>Sarah Johnson</h3>
+              <p>Home Seller</p>
+            </div>
+          </div>
+          <p>"The real estate detailing service transformed my property. We received multiple offers within the first week!"</p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-content">
+          <div class="testimonial-container">
+            <div class="testimonial-avatar testimonial-avatar-2">MC</div>
+            <div>
+              <h3>Michael Chen</h3>
+              <p>Property Developer</p>
+            </div>
+          </div>
+          <p>"Their attention to detail and professional photography made our properties stand out in a competitive market."</p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-content">
+          <div class="testimonial-container">
+            <div class="testimonial-avatar testimonial-avatar-3">ER</div>
+            <div>
+              <h3>Emily Rodriguez</h3>
+              <p>Real Estate Agent</p>
+            </div>
+          </div>
+          <p>"I've worked with many detailing services, but none compare to the quality and professionalism I've experienced with this team."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section">
+    <h2>Service Icons</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-content">
+          <div class="service-container">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                <circle cx="12" cy="13" r="4"></circle>
+              </svg>
+            </div>
+            <div>
+              <h3>Photography</h3>
+            </div>
+          </div>
+          <p>Professional photography services to showcase your property in the best light.</p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-content">
+          <div class="service-container">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+              </svg>
+            </div>
+            <div>
+              <h3>Virtual Tours</h3>
+            </div>
+          </div>
+          <p>Immersive 3D virtual tours that allow potential buyers to explore every corner of your property.</p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-content">
+          <div class="service-container">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div>
+              <h3>Floor Plans</h3>
+            </div>
+          </div>
+          <p>Detailed floor plans that help buyers understand the layout and flow of your property.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section">
+    <h2>Hero Background</h2>
+    <div class="hero-bg hero-preview">
+      Hero Section Background
+    </div>
+  </div>
+  
+  <div class="section">
+    <h2>Logo Placeholder</h2>
+    <div class="logo-placeholder">
+      <span>Estate</span>
+      <span>Detail</span>
+    </div>
+  </div>
+  
+  <div class="section">
+    <h2>Featured Property Badge</h2>
+    <div class="card">
+      <div class="property-image property-image-5 property-image-pattern" style="position: relative;">
+        <div class="featured-badge">Featured</div>
+      </div>
+      <div class="card-content">
+        <h3>Lakefront Property</h3>
+        <p>Chicago, IL</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
